@@ -5,6 +5,7 @@ import com.zteict.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -15,7 +16,7 @@ public class DeptController {
 
     @PostMapping("/dept/add")
     public @ResponseBody boolean add(){
-        Dept dept=new Dept().setDname("美女部").setDb_source("clouddb01");
+        Dept dept=new Dept().setDname(new Date().toString()).setDb_source("clouddb01");
         return deptService.add(dept);
     }
 
