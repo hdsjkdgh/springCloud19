@@ -29,4 +29,9 @@ public class ConsumerController {
     public List<Dept> list(){
         return restTemplate.getForObject(URL_PRIFIX+"/dept/list",List.class);
     }
+
+    @GetMapping("/consumer/dept/discovery")
+    public Object discovery(){
+       return restTemplate.getForObject(URL_PRIFIX+"/dept/discovery",Object.class);
+    }
 }
