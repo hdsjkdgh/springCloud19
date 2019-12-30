@@ -2,6 +2,7 @@ package com.zteict.controller;
 
 import com.zteict.entity.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -10,7 +11,7 @@ import java.util.List;
 @RestController
 public class ConsumerController {
 
-    private static final String URL_PRIFIX="http://localhost:8001/";
+    private static final String URL_PRIFIX="http://MICROSERVICECLOUD-DEPT";
 
     @Autowired
     private RestTemplate restTemplate;
